@@ -22,7 +22,7 @@ Some Unit Tests are also written.
 Contributors names and contact info
 
 Hammad Zafar  
-ex. [Email](hammadzafar@outlook.com)
+[Email](hammadzafar@outlook.com)
 
 ## Version History
 
