@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eyc-Ao-Bf0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="SampleMVVMApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="q9o-NA-tye">
+                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Mjc-yM-fxY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BmW-r9-5CU">
+                                <rect key="frame" x="103.5" y="456.5" width="207" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BmW-r9-5CU" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="6Ff-Gj-qpa"/>
+                            <constraint firstItem="q9o-NA-tye" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="94h-NO-vfD"/>
+                            <constraint firstItem="BmW-r9-5CU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ufd-fz-VvE"/>
+                            <constraint firstItem="q9o-NA-tye" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XzR-RF-bMV"/>
+                            <constraint firstItem="q9o-NA-tye" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YAk-7t-LOO"/>
+                            <constraint firstItem="BmW-r9-5CU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pQP-dV-Azr"/>
+                            <constraint firstItem="q9o-NA-tye" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="sy8-hS-T9l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TypiCode" id="GAv-Ta-srZ"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="BmW-r9-5CU" id="Mf3-Qs-oNO"/>
+                        <outlet property="tableView" destination="q9o-NA-tye" id="eST-IB-5IK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.10144927536237" y="107.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4nH-YS-8ZP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eyc-Ao-Bf0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m1k-yM-nLS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lHb-8Q-Lvf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fof-tJ-x6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
